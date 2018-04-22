@@ -60,7 +60,6 @@ return
 
 ;Win+e打开everything
 #e::Run C:\Program Files\Everything\Everything.exe
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -68,7 +67,9 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 CapsLock::Home
-PrintScreen::End
+PrintScreen::Home
+Insert::End
+^Insert::Insert
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -79,6 +80,7 @@ PrintScreen::End
 WinSet, AlwaysOnTop, toggle,A
 WinGetTitle, getTitle, A
 Winget, getTop,ExStyle,A
+return
 ;if (getTop & 0x8)
     ;TrayTip 已置顶, 窗口标题: `n%getTitle%,10,1
 ;else
